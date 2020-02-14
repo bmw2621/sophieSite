@@ -1,7 +1,14 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/ssr-apis/
- */
+import React from "react";
+import { navigate } from "gatsby";
 
-// You can delete this file if you're not using it
+import { AuthProvider } from "react-use-auth";
+
+export const wrapRootElement = ({ element }) => (
+    <AuthProvider
+        navigate={navigate}
+        auth0_domain="dev-bvvj405t.auth0.com"
+        auth0_client_id="bAZiap8pwJKDFTRESl3mh0JaNf80Up5b"
+    >
+        {element}
+    </AuthProvider>
+);
