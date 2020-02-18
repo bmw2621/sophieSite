@@ -1,7 +1,7 @@
 import React from 'react';
 import Img from "gatsby-image"
 
-const BlogCard = (props) => {
+const VideoCard = (props) => {
 
   const title = props.title
   const created = props.created
@@ -15,10 +15,9 @@ const BlogCard = (props) => {
     <div className="blogCard">
     {
       image &&
-      <Img
-        fluid={image}
-        style={{"width":"200px","height":"200px"}}
-        imgStyle={{"object-fit":"cover","width":"200px","height":"200px", "filter":"opacity(80%)","filter":"grayscale(100%)"}}
+      <img
+        src={image}
+        style={{"object-fit":"cover","width":"200px","height":"200px", "filter":"opacity(80%)","filter":"grayscale(100%)"}}
         />
     }
       <div className="blogCardData">
@@ -30,4 +29,4 @@ const BlogCard = (props) => {
   )
 }
 
-export default BlogCard
+export default VideoCard

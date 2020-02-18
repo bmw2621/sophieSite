@@ -4,6 +4,14 @@
   --greenish: rgb(0, 125, 0);
 }
 
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--greenish);
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
@@ -36,6 +44,10 @@ body, #___gatsby, #gatsby-focus-wrapper {
   justify-content: center;
   color: white;
   box-shadow: 0px 5px 10px gray;
+}
+
+.App-Link:hover {
+  background: #EEE;
 }
 
 #hero-text {
@@ -109,6 +121,14 @@ body, #___gatsby, #gatsby-focus-wrapper {
     z-index: -1;
   }
 
+  .App-Link {
+    height: 100%;
+    width: calc(100% / 5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   #nav1 {
     width: 100%;
     height: 100%;
@@ -116,6 +136,21 @@ body, #___gatsby, #gatsby-focus-wrapper {
     align-items: center;
     justify-content: space-around;
     box-shadow: 0px 5px 10px rgb(0, 0, 0);
+  }
+
+  footer {
+    width: 100vw;
+    background: white;
+    box-shadow: 5px 0px 10px rgb(0, 0, 0);
+  }
+
+  main {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 0 1.0875rem 1.45rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   #login {
@@ -147,12 +182,43 @@ body, #___gatsby, #gatsby-focus-wrapper {
   }
 
   .blogCard {
+    height:200px;
     display: flex;
+    margin-bottom: 10px;
+    background: white;
+    box-shadow: 5px 5px 10px black;
+  }
 
+  .blogCardData {
+    width: 80%;
+    padding-left: 10px;
   }
 
   .cardImg {
-    width: 50%;
+    width: 200px;
+    height: 200px;
+    filter: grayscale(100%);
+  }
+
+  .cardTitle {
+    margin: 0px;
+  }
+
+  .cardDate {
+    margin-top: 0px;
+    font-style: italic;
+    color: var(--greenish);
+  }
+
+  .pageTitle {
+    width: 100%;
+    text-align: center;
+    font-size: 3vw;
+    margin: 20px;
+    align-self: center;
+    color: white;
+    letter-spacing: .3em;
+    text-shadow: 5px 5px 10px black;
   }
 }
 

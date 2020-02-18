@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import { useAuth } from 'react-use-auth'
 
 function Nav() {
@@ -8,7 +9,7 @@ function Nav() {
 
       <div className="App-navigation">
         <nav id="nav1">
-          <div className="App-Link">Blog</div>
+          <Link to="/blog" className="App-Link">Blog</Link>
           <div className="App-Link">Video</div>
           <div className="App-Link">Shop</div>
           <div className="App-Link">Interact</div>
