@@ -18,7 +18,7 @@ const BlogCard = (props) => {
       <Img
         fluid={image}
         style={{"width":"200px","height":"200px"}}
-        imgStyle={{"object-fit":"cover","width":"200px","height":"200px", "filter":"opacity(80%)","filter":"grayscale(100%)"}}
+        imgStyle={{"object-fit":"cover","width":"200px","height":"200px", "filter":"brightness(150%) grayscale(100%)"}}
         />
     }
       <div className="blogCardData">

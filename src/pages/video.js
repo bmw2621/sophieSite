@@ -1,7 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -34,7 +32,7 @@ const VideoPage = () => {
 
   return (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Videos" />
     <span className="pageTitle">Videos</span>
 
     <VideoContent articles={data} />

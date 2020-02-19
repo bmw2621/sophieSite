@@ -1,6 +1,10 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Drupal Tutorial`,
+    title: `Sophie Winchester`,
     description: `Learning to Build a Gatsby Blog with Drupal CMS.`,
     author: `@gatsbyjs`,
   },
@@ -24,7 +28,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/sophie-icon.png`, // This path is relative to the root of the site.
       },
     },
     {
@@ -37,7 +41,7 @@ module.exports = {
     resolve: `gatsby-source-youtube-v2`,
     options: {
       channelId: ['UC8SKDJE4tHZhiv04FYgXTHQ'],
-      apiKey: "AIzaSyBolxK_najateJe9P6ZvrKmxIw7-mknIS0",
+      apiKey: process.env.YOUTUBE_API,
       maxVideos: 50 // Defaults to 50
     },
   },

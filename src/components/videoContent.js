@@ -9,7 +9,6 @@ const VideoContent = (props) => {
     <>
       {
         articles.map((article)=>{
-          {console.log(article)}
 
           return (
               <VideoCard

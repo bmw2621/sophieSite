@@ -8,9 +8,9 @@ function Header() {
   console.log(user)
 
   if(isAuthenticated()){
-    loginData = <><img src={user.picture} style={{"width":"30px","border-radius":"30px"}} /><span>Welcome {user.given_name}</span><button onClick={ () => logout() }>Logout</button></>
+    loginData = <><img alt="User Avatar" src={user.picture} style={{"width":"30px","border-radius":"30px"}} /><span style={{"margin-right":"20px", "margin-left":"20px"}}>Welcome {user.given_name}</span><button className="logButton" onClick={ () => logout() }>Logout</button></>
   } else {
-    loginData = <button onClick={ () => login() }>Login</button>
+    loginData = <button className="logButton" onClick={ () => login() }>Login</button>
   }
 
   return (

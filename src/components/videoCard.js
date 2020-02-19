@@ -1,5 +1,4 @@
 import React from 'react';
-import Img from "gatsby-image"
 
 const VideoCard = (props) => {
 
@@ -17,7 +16,8 @@ const VideoCard = (props) => {
       image &&
       <img
         src={image}
-        style={{"object-fit":"cover","width":"200px","height":"200px", "filter":"opacity(80%)","filter":"grayscale(100%)"}}
+        style={{"object-fit":"cover","width":"200px","height":"200px", "filter":"brightness(150%) grayscale(100%)"}}
+        alt="Youtube Video Thumbnail"
         />
     }
       <div className="blogCardData">

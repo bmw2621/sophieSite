@@ -1,7 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -43,11 +41,9 @@ const BlogPage = () => {
 
   )
 
-  console.log(data)
-
   return (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Blog" />
     <span className="pageTitle">Blog</span>
 
     <BlogContent articles={data.allNodeArticle.nodes} />
