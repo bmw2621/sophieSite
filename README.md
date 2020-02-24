@@ -29,5 +29,7 @@ Navigate to `http://localhost:9000`
 ## Deployment
 
 Todo: Add instructions for deployment to Netlify
+
 Todo: Configure Build Hooks on Drupal instance to rebuild upon each new article position
+
 Todo: Configure Netlify to rebuild daily to pull in new Youtube posts
