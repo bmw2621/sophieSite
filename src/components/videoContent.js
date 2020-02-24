@@ -15,7 +15,8 @@ const VideoContent = (props) => {
                 title={article.node.title}
                 created={article.node.publishedAt}
                 image={article.node.thumbnail.url}
-                text={article.node.description} />
+                text={article.node.description}
+                videoId={article.node.videoId}/>
           )
         })
       }

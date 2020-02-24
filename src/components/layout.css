@@ -8,15 +8,12 @@ a {
   text-decoration: none;
 }
 
-a:visited {
-  color: var(--greenish);
-}
-
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   background-image: url('../images/shiplap.jpg');
   background: white;
+  background-attachment: fixed;
   overflow-x: hidden
 }
 
@@ -25,7 +22,8 @@ body, #___gatsby, #gatsby-focus-wrapper {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-image: url('../images/shiplap.jpg')
+  background-image: url('../images/shiplap.jpg');
+  background-attachment: fixed;
 }
 
 .App {
@@ -49,15 +47,26 @@ body, #___gatsby, #gatsby-focus-wrapper {
   box-shadow: 0px 5px 10px gray;
 }
 
+.App-Link {
+  color: var(--greenish);
+}
+
+.App-Link:visited {
+  color: var(--greenish);
+}
+
 .App-Link:hover {
   background: #EEE;
+}
+
+.blogCardLink, .blogCardLink:visited, .blogCardLink:active, .homeLink, .homeLink:visited, .homeCardLink:active {
+  color: black;
 }
 
 #hero-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
 }
 
 #hero-title {
@@ -77,7 +86,7 @@ body, #___gatsby, #gatsby-focus-wrapper {
 }
 
 .slightlyBigger {
-  font-size: calc(10px + 3vmin);
+  font-size: calc(10px + 4vmin);
 }
 
 #content {
@@ -94,6 +103,40 @@ body, #___gatsby, #gatsby-focus-wrapper {
 .sophieSpinner > div {
   width: 50px !important;
   height: 50px !important;
+}
+
+#spinnerContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+footer {
+  width: 100vw;
+  background: white;
+  box-shadow: 5px 0px 10px gray;
+  text-align: center;
+}
+
+.cardTitle {
+  margin: 0px;
+  color: black;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+.cardTitle:visited {
+  margin: 0px;
+  color: black;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.cardDate {
+  margin-top: 0px;
+  font-style: italic;
+  color: var(--greenish);
 }
 
 @media only screen and (min-width: 901px) {
@@ -124,7 +167,7 @@ body, #___gatsby, #gatsby-focus-wrapper {
 
   .App-Link {
     height: 100%;
-    width: calc(100% / 5);
+    width: calc(100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -139,17 +182,10 @@ body, #___gatsby, #gatsby-focus-wrapper {
     box-shadow: 0px 5px 10px gray;
   }
 
-  footer {
-    width: 100vw;
-    background: white;
-    box-shadow: 5px 0px 10px gray;
-    text-align: center;
-  }
-
   main {
     margin: 0 auto;
     max-width: 960px;
-    padding: 0 1.0875rem 1.45rem;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -191,7 +227,7 @@ body, #___gatsby, #gatsby-focus-wrapper {
   }
 
   .blogCard {
-    height:200px;
+    min-height:200px;
     display: flex;
     margin-bottom: 10px;
     background: white;
@@ -200,24 +236,23 @@ body, #___gatsby, #gatsby-focus-wrapper {
 
   .blogCardData {
     width: 80%;
-    padding-left: 10px;
+    padding: 20px;
+  }
+
+  .blogCardData > .App-Link {
+    height: inherit;
+    width: auto;
+    padding: 15px;
+    margin: 10px;
   }
 
   .cardImg {
     width: 200px;
-    height: 200px;
+    height: 100%;
     filter: grayscale(100%);
   }
 
-  .cardTitle {
-    margin: 0px;
-  }
 
-  .cardDate {
-    margin-top: 0px;
-    font-style: italic;
-    color: var(--greenish);
-  }
 
   .pageTitle {
     width: 100%;
@@ -229,6 +264,29 @@ body, #___gatsby, #gatsby-focus-wrapper {
     letter-spacing: .3em;
     text-shadow: 5px 5px 10px gray;
   }
+
+  #hamburger {
+    display: none;
+  }
+
+  .socialIcon {
+    width: 3vw;
+  }
+
+  .imageWrapper {
+    width: 200px;
+  }
+
+  .login1 {
+    display: none;
+  }
+
+  .videoImage {
+    object-fit : cover;
+    max-width : 200px;
+    min-height : 200px;
+    filter : brightness(155%) grayscale(90%) invert(15%);
+  }
 }
 
 @media only screen and (max-width: 900px) {
@@ -238,6 +296,7 @@ body, #___gatsby, #gatsby-focus-wrapper {
 
   #hero-text {
     align-self: center;
+    align-items: center;
   }
 
 
@@ -253,7 +312,7 @@ body, #___gatsby, #gatsby-focus-wrapper {
   .App-navigation {
     width: auto;
     height: 100%;
-    position: absolute;
+    position: sticky;
     left: 0px;
     top: 0px;
     display: flex;
@@ -261,14 +320,12 @@ body, #___gatsby, #gatsby-focus-wrapper {
     font-size: 1.3em;
     background-color: white;
     color: var(--greenish);
+    z-index: 100;
   }
 
   #nav1 {
     height: 100%;
-    padding: 20px;
-    position: sticky;
-    bottom: 0px;
-    left: 0px;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -277,7 +334,17 @@ body, #___gatsby, #gatsby-focus-wrapper {
   }
 
   .App-Link {
-    margin-top: 60px;
+    margin: 30px;
+    display: none;
+  }
+
+  #hamburger {
+    margin: 30px;
+    color: var(--greenish);
+  }
+
+  #hamburger:visited {
+    color: var(--greenish);
   }
 
   #loginNavBar {
@@ -306,6 +373,65 @@ body, #___gatsby, #gatsby-focus-wrapper {
 
   #login {
     display: none;
+  }
+
+  .socialIcon {
+    width: 10vw;
+  }
+
+  .pageTitle {
+    width: 100%;
+    text-align: center;
+    font-size: 10vw;
+    margin: 20px;
+    align-self: center;
+    color: var(--greenish);
+    letter-spacing: .3em;
+    text-shadow: 5px 5px 10px gray;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .imageWrapper {
+    width: 100%;
+    height: 200px;
+  }
+
+  .blogCardData {
+    padding: 10px;
+  }
+
+  .blogCard {
+    background: white;
+    margin-bottom: 20px;
+    -webkit-box-shadow: 5px 5px 10px gray;
+    box-shadow: 5px 5px 10px gray;
+  }
+
+  .login1 {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logButton {
+    border : 0;
+    background :none;
+    color : var(--greenish);
+    font-size : 1em;
+    font-family : 'Roboto', sans-serif;
+    font-weight: bold;
+  }
+
+  .videoImage {
+    object-fit : cover;
+    width : 100%;
+    min-height : 200px;
+    max-height: 200px;
+    filter : brightness(155%) grayscale(90%) invert(15%);
   }
 
 }

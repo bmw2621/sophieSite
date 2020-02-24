@@ -4,7 +4,8 @@ import BlogCard from "./blogCard"
 const BlogContent = (props) => {
 
   const articles = props.articles;
-  console.log(articles)
+
+
 
   return (
     <>
@@ -16,7 +17,10 @@ const BlogContent = (props) => {
                 title={article.title}
                 created={article.created}
                 image={article.relationships.field_image && article.relationships.field_image.localFile.childImageSharp.fluid}
-                text={article.body.processed} />
+                text={article.body.processed}
+                key={article.id}
+                id={article.id}
+                full={false} />
           )
         })
       }

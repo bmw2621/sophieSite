@@ -28,8 +28,6 @@ const VideoPage = () => {
 
   data = data.allYoutubeVideo.edges;
 
-  console.log(data)
-
   return (
   <Layout>
     <SEO title="Videos" />

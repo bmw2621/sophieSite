@@ -5,23 +5,25 @@ const VideoCard = (props) => {
   const title = props.title
   const created = props.created
   const text = props.text
+  const url = `https://www.youtube.com/watch?v=${props.videoId}`
+
   let image
   props.image ? image = props.image : image = null
-
-  console.log(image)
 
   return (
     <div className="blogCard">
     {
       image &&
-      <img
-        src={image}
-        style={{"object-fit":"cover","width":"200px","height":"200px", "filter":"brightness(150%) grayscale(100%)"}}
-        alt="Youtube Video Thumbnail"
-        />
+        <a href={url}>
+          <img
+            src={image}
+            className="videoImage"
+            alt="Youtube Video Thumbnail"
+            />
+        </a>
     }
       <div className="blogCardData">
-        <h1 className="cardTitle">{title}</h1>
+        <a href={url} className="cardTitle">{title}</a>
         <h3 className="cardDate">{created}</h3>
         <div dangerouslySetInnerHTML={{ __html: text.split(' ').splice(0, 50).join(' ') + '...' }}></div>
       </div>

@@ -3,10 +3,9 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+const meetingId = "2247458727"
 
 const InteractPage = () => {
-
-  const meetingId = "2247458727"
 
   return (
   <Layout>

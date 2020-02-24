@@ -11,6 +11,7 @@ const BlogPage = () => {
     {
     allNodeArticle {
       nodes {
+        id
         created(formatString: "DD MMMM YY")
         title
         body {
