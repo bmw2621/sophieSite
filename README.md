@@ -1,6 +1,6 @@
 # Source Code for Sophie Winchester Healthy Living Homepage
 
-This repository host source code for Sophie Winchester Healthy Living website.  Site uses `gatsby-source-drupal` to pull data from Drupal CMS hosted on an AWS EC2 instance with JSON:API extension and uses `gatsby-source-youtubev2` to pull data from clients YouTube channel using clients API key.
+This repository host source code for Sophie Winchester Healthy Living website.  Site uses `gatsby-source-drupal` to pull data from Drupal CMS hosted on an AWS EC2 instance with JSON:API extension and uses `gatsby-source-youtubev2` to pull data from clients YouTube channel using clients API key.  Site also uses Auth0 to protect content and manage user accessibility to content.  
 
 ### Dependancies
 
