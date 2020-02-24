@@ -39,6 +39,7 @@ body, #___gatsby, #gatsby-focus-wrapper {
   min-height: 50vh;
   background-image: url("../images/sophie_header.png");
   background-position: left center;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,6 +80,7 @@ body, #___gatsby, #gatsby-focus-wrapper {
 
 #hero-subtitle {
   font-size: calc(10px + 1vmin);
+  font-style: italic;
   letter-spacing: .3em;
   text-transform: uppercase;
   color: var(--greenish);
@@ -223,7 +225,7 @@ footer {
     background: white;
     box-shadow: 5px 5px 10px gray;
     margin: 20px;
-    padding: 50px;
+    padding: 0 50px 50px;
   }
 
   .blogCard {
@@ -255,7 +257,7 @@ footer {
 
 
   .pageTitle {
-    width: 100%;
+    width: calc(100% - 40px);
     text-align: center;
     font-size: 3vw;
     margin: 20px;

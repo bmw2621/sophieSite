@@ -23,7 +23,7 @@ function Header() {
           <div id="hero-title">
             <Link to="/" className="homeLink"><span className="slightlyBigger">S</span>ophie <span className="slightlyBigger">W</span>inchester</Link>
           </div>
-          <div id="hero-subtitle">Witty Slugline</div>
+          <div id="hero-subtitle">Live Healthy, Live Happy, Live Life</div>
         </div>
 
       </header>

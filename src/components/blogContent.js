@@ -5,8 +5,6 @@ const BlogContent = (props) => {
 
   const articles = props.articles;
 
-
-
   return (
     <>
       {

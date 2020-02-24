@@ -9,7 +9,7 @@ const BlogPage = () => {
 
   const data = useStaticQuery(graphql`
     {
-    allNodeArticle {
+    allNodeArticle(sort: {fields: created, order: DESC}) {
       nodes {
         id
         created(formatString: "DD MMMM YY")

@@ -9,7 +9,7 @@ const VideoPage = () => {
 
   let data = useStaticQuery(graphql`
     {
-      allYoutubeVideo {
+      allYoutubeVideo(sort: {fields: publishedAt, order: DESC}) {
         edges {
           node {
             title
