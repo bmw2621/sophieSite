@@ -12,7 +12,7 @@ const InteractPage = () => {
     <SEO title="Interact" />
     <span className="pageTitle">Interact</span>
 
-    <div class="iframe-container" style={{"overflow": "hidden", "padding-top": "56.25%", "position": "relative"}}>
+    <div className="iframe-container" style={{"overflow": "hidden"}}>
       	<iframe title="Zoom Call" allow="microphone; camera" style={{"border": "0", "height": "100%", "left": "0", "position": "absolute", "top": "0", "width": "100%"}} src={"https://success.zoom.us/wc/join/"+meetingId} frameborder="0"></iframe>
   	</div>
 
