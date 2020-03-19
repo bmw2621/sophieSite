@@ -2,7 +2,7 @@ import React from 'react';
 import { useAuth } from 'react-use-auth'
 import { Link } from 'gatsby';
 
-function Header() {
+const Header = (props) => {
 
   const { isAuthenticated, login, logout, user } = useAuth()
   let loginData

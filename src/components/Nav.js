@@ -30,7 +30,7 @@ const Nav = () => {
 
   return (
 
-      <div className="App-navigation">
+      <div className="App-navigation" id="App-navigation">
         <nav id="nav1">
           <div id="hamburger" onClick={toggleFold}><FontAwesomeIcon icon={faBars} /></div>
           <div className="App-Link login1">{loginData}</div>

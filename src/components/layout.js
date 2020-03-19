@@ -26,9 +26,9 @@ const Layout = ({ children }) => {
             <a href="https://www.instagram.com/sophiedwinchester/?hl=en"><img alt="Instagram Icon" className="socialIcon" src={igIcon}></img></a>
             <a href="https://www.linkedin.com/in/sophie-winchester-190a8312b"><img alt="LinkedIn Icon" className="socialIcon" src={liIcon}></img></a>
           </div>
-          <span>© {new Date().getFullYear()}, Built with
+          <span style={{"color":"#bbb"}}>© {new Date().getFullYear()}, Built by
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a></span>
+          <a href="https://www.benwinchester.dev" style={{"color":"#999"}}>BW Web Solutions</a></span>
         </footer>
     </>
   )
