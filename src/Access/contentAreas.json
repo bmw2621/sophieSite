@@ -1,0 +1,12 @@
+[
+    {
+      "accessName" : "YogaClass001",
+      "slug" :"yoga1",
+      "linkText" : "Yoga Class 1"
+    },
+    {
+      "accessName" : "YogaClass002",
+      "slug" : "yoga2",
+      "linkText" : "Yoga Class 2"
+    }
+]

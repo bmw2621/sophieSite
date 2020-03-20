@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100&display=swap");
-
-:root{
+:root {
   --greenish: rgb(0, 125, 0);
 }
 
@@ -11,10 +10,10 @@ a {
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
-  background-image: url('../images/shiplap.jpg');
+  background-image: url("../images/shiplap.jpg");
   background: white;
   background-attachment: fixed;
-  overflow-x: hidden
+  overflow-x: hidden;
 }
 
 body, #___gatsby, #gatsby-focus-wrapper {
@@ -22,7 +21,7 @@ body, #___gatsby, #gatsby-focus-wrapper {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-image: url('../images/shiplap.jpg');
+  background-image: url("../images/shiplap.jpg");
   background-attachment: fixed;
 }
 
@@ -40,12 +39,34 @@ body, #___gatsby, #gatsby-focus-wrapper {
   background-image: url("../images/sophie_header.png");
   background-position: left center;
   background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: white;
-  box-shadow: 0px 5px 10px gray;
+  -webkit-box-shadow: 0px 5px 10px gray;
+          box-shadow: 0px 5px 10px gray;
+}
+
+@media only screen and (min-width: 901px) {
+  .App-header {
+    font-size: calc(10px + 3vmin);
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .App-header {
+    font-size: calc(10px + 2vmin);
+  }
 }
 
 .App-Link {
@@ -60,14 +81,127 @@ body, #___gatsby, #gatsby-focus-wrapper {
   background: #EEE;
 }
 
+@media only screen and (max-width: 900px) {
+  .App-Link {
+    margin: 15px;
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 901px) {
+  .App-Link {
+    height: 100%;
+    width: calc(100%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .blogCardLink, .blogCardLink:visited, .blogCardLink:active, .homeLink, .homeLink:visited, .homeCardLink:active {
   color: black;
 }
 
-#hero-text {
+.Protected-Links {
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.Protected-Links > .App-Link {
+  height: 3em;
+  width: 100%;
+  background: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: lighter;
+  font-style: italic;
+  margin: 0px;
+}
+
+.Protected-Links > .App-Link:hover {
+  background: #EEE;
+}
+
+@media only screen and (min-width: 901px) {
+  .Protected-Links {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+.Hidden-Link {
+  display: none;
+  -webkit-box-shadow: 0px 5px 10px gray;
+          box-shadow: 0px 5px 10px gray;
+}
+
+#hero-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media only screen and (min-width: 901px) {
+  #hero-text {
+    margin-right: 10%;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #hero-text {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 #hero-title {
@@ -85,6 +219,12 @@ body, #___gatsby, #gatsby-focus-wrapper {
   text-transform: uppercase;
   color: var(--greenish);
   font-weight: normal;
+}
+
+@media only screen and (max-width: 395px) {
+  #hero-subtitle {
+    font-size: 3vw;
+  }
 }
 
 .slightlyBigger {
@@ -109,8 +249,12 @@ body, #___gatsby, #gatsby-focus-wrapper {
 
 #spinnerContainer {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 50px;
   margin-bottom: 50px;
 }
@@ -118,17 +262,12 @@ body, #___gatsby, #gatsby-focus-wrapper {
 footer {
   width: 100vw;
   background: white;
-  box-shadow: 5px 0px 10px gray;
+  -webkit-box-shadow: 5px 0px 10px gray;
+          box-shadow: 5px 0px 10px gray;
   text-align: center;
 }
 
-.cardTitle {
-  margin: 0px;
-  color: black;
-  font-weight: bold;
-  font-size: 1.8rem;
-}
-.cardTitle:visited {
+.cardTitle, .cardTitle:visited {
   margin: 0px;
   color: black;
   font-weight: bold;
@@ -147,170 +286,7 @@ footer {
   z-index: 99;
 }
 
-
-@media only screen and (min-width: 901px) {
-  .App-header {
-    font-size: calc(10px + 3vmin);
-  }
-
-  #hero-text {
-    margin-right: 10%;
-    align-self: flex-end;
-    text-align: center;
-  }
-
-  #nav-bars {
-    display: none;
-  }
-
-  .App-navigation {
-    width: 100%;
-    height: 3em;
-    display: flex;
-    flex-direction: column;
-    font-size: 1.3em;
-    color: var(--greenish);
-    background-color: white;
-    z-index: -1;
-  }
-
-  .App-Link {
-    height: 100%;
-    width: calc(100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  #nav1 {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    box-shadow: 0px 5px 10px gray;
-  }
-
-  main {
-    margin: 0 auto;
-    max-width: 960px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  #login {
-    position: absolute;
-    right: 5px;
-    top: 5px;
-    display: flex;
-    -ms-align-items: center;
-    align-items: center;
-  }
-
-  #login > * {
-    margin-left: 10px;
-    color: black;
-    font-size: 1rem;
-    font-weight: lighter;
-  }
-
-  #login > .logButton {
-    background-color: inherit;
-    border: 0px;
-    color: var(--greenish);
-    font-weight: thinner;
-    /* font-style: italic; */
-  }
-
-  #loginNavBar {
-    display: none;
-  }
-
-  #indexContent {
-    background: white;
-    box-shadow: 5px 5px 10px gray;
-    margin: 20px;
-    padding: 0 50px 50px;
-  }
-
-  .blogCard {
-    min-height:200px;
-    width: 100%;
-    display: flex;
-    margin-bottom: 10px;
-    background: white;
-    box-shadow: 5px 5px 10px gray;
-  }
-
-  .blogCardData {
-    width: 80%;
-    padding: 20px;
-  }
-
-  .blogCardData > .App-Link {
-    height: inherit;
-    width: auto;
-    padding: 15px;
-    margin: 10px;
-  }
-
-  .cardImg {
-    width: 200px;
-    height: 100%;
-    filter: grayscale(100%);
-  }
-
-
-
-  .pageTitle {
-    width: calc(100% - 40px);
-    text-align: center;
-    font-size: 3vw;
-    margin: 20px;
-    align-self: center;
-    color: var(--greenish);
-    letter-spacing: .3em;
-    text-shadow: 5px 5px 10px gray;
-  }
-
-  #hamburger {
-    display: none;
-  }
-
-  .socialIcon {
-    width: 3vw;
-  }
-
-  .imageWrapper {
-    width: 200px;
-  }
-
-  .login1 {
-    display: none;
-  }
-
-  .videoImage {
-    object-fit : cover;
-    max-width : 200px;
-    min-height : 200px;
-    filter : brightness(155%) grayscale(90%) invert(15%);
-  }
-}
-
 @media only screen and (max-width: 900px) {
-  .App-header {
-    font-size: calc(10px + 2vmin);
-  }
-
-  #hero-text {
-    align-self: center;
-    align-items: center;
-  }
-
-
   #nav-bars {
     color: var(--greenish);
     font-size: 1.5em;
@@ -319,61 +295,164 @@ footer {
     left: 45px;
     z-index: 5;
   }
+}
 
+@media only screen and (min-width: 901px) {
+  #nav-bars {
+    display: none;
+  }
+}
+
+.App-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 1.3em;
+  color: var(--greenish);
+  background-color: white;
+}
+
+@media only screen and (max-width: 900px) {
   .App-navigation {
     width: auto;
     height: 100%;
+    position: -webkit-sticky;
     position: sticky;
     left: 0px;
     top: 0px;
-    display: flex;
-    flex-direction: column;
-    font-size: 1.3em;
-    background-color: white;
-    color: var(--greenish);
     z-index: 100;
   }
+}
 
-  #nav1 {
-    height: 100%;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    box-shadow: 0px 5px 5px gray;
+@media only screen and (min-width: 901px) {
+  .App-navigation {
+    width: 100%;
+    height: 3em;
+    z-index: -1;
   }
+}
 
-  .App-Link {
-    margin: 30px;
+#nav1 {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 0px 5px 10px gray;
+          box-shadow: 0px 5px 10px gray;
+}
+
+@media only screen and (min-width: 901px) {
+  #nav1 {
+    width: 100%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #nav1 {
+    padding: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media only screen and (min-width: 901px) {
+  main {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media only screen and (min-width: 901px) {
+  #login {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #login > * {
+    margin-left: 10px;
+    color: black;
+    font-size: 1rem;
+    font-weight: lighter;
+  }
+  #login > .logButton {
+    background-color: inherit;
+    border: 0px;
+    color: var(--greenish);
+    font-weight: thinner;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #login {
     display: none;
   }
+}
 
-  #hamburger {
-    margin: 30px;
-    color: var(--greenish);
+@media only screen and (min-width: 901px) {
+  #loginNavBar {
+    display: none;
   }
+}
 
-  #hamburger:visited {
-    color: var(--greenish);
-  }
-
+@media only screen and (max-width: 900px) {
   #loginNavBar {
     position: absolute;
     right: 5px;
     top: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    -ms-align-items: center;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-
   #loginNavBar > * {
     margin-left: 10px;
     color: black;
     font-size: 1rem;
     font-weight: lighter;
   }
-
   #loginNavBar > .logButton {
     background-color: inherit;
     border: 0px;
@@ -381,79 +460,192 @@ footer {
     font-weight: lighter;
     font-style: italic;
   }
+}
 
-  #login {
-    display: none;
-  }
-
-  .socialIcon {
-    width: 10vw;
-  }
-
-  .pageTitle {
-    width: 100%;
-    text-align: center;
-    font-size: 10vw;
+@media only screen and (min-width: 901px) {
+  #indexContent {
+    background: white;
+    -webkit-box-shadow: 5px 5px 10px gray;
+            box-shadow: 5px 5px 10px gray;
     margin: 20px;
-    align-self: center;
-    color: var(--greenish);
-    letter-spacing: .3em;
-    text-shadow: 5px 5px 10px gray;
+    padding: 0 50px 50px;
   }
+}
 
-  main {
-    display: flex;
-    flex-direction: column;
-  }
-
+@media only screen and (max-width: 900px) {
   #indexContent {
     padding: 20px;
   }
+}
 
+.blogCard {
+  -webkit-box-shadow: 5px 5px 10px gray;
+          box-shadow: 5px 5px 10px gray;
+  background: white;
+}
+
+@media only screen and (min-width: 901px) {
+  .blogCard {
+    min-height: 200px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .blogCard {
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: 901px) {
+  .blogCardData {
+    width: 80%;
+    padding: 20px;
+  }
+  .blogCardData > .App-Link {
+    height: inherit;
+    width: auto;
+    padding: 15px;
+    margin: 10px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .blogCardData {
+    padding: 10px;
+  }
+}
+
+@media only screen and (min-width: 901px) {
+  .cardImg {
+    width: 200px;
+    height: 100%;
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+  }
+}
+
+.pageTitle {
+  text-align: center;
+  margin: 20px;
+  letter-spacing: .3em;
+  text-shadow: 5px 5px 10px gray;
+  color: var(--greenish);
+}
+
+@media only screen and (min-width: 901px) {
+  .pageTitle {
+    width: calc(100% - 40px);
+    font-size: 3vw;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .pageTitle {
+    width: 100%;
+    font-size: 10vw;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+@media only screen and (min-width: 901px) {
+  #hamburger {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #hamburger {
+    margin: 30px;
+    color: var(--greenish);
+  }
+  #hamburger:visited {
+    color: var(--greenish);
+  }
+}
+
+@media only screen and (min-width: 901px) {
+  .socialIcon {
+    width: 3vw;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .socialIcon {
+    width: 10vw;
+  }
+}
+
+@media only screen and (min-width: 901px) {
+  .imageWrapper {
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
   .imageWrapper {
     width: 100%;
     height: 200px;
   }
+}
 
-  .blogCardData {
-    padding: 10px;
-  }
-
-  .blogCard {
-    background: white;
-    margin-bottom: 20px;
-    -webkit-box-shadow: 5px 5px 10px gray;
-    box-shadow: 5px 5px 10px gray;
-  }
-
+@media only screen and (min-width: 901px) {
   .login1 {
     display: none;
-    flex-direction: column;
-    align-items: center;
   }
+}
 
+@media only screen and (max-width: 900px) {
+  .login1 {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.videoImage {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: brightness(155%) grayscale(90%) invert(15%);
+          filter: brightness(155%) grayscale(90%) invert(15%);
+  min-height: 200px;
+}
+
+@media only screen and (min-width: 901px) {
+  .videoImage {
+    max-width: 200px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .videoImage {
+    width: 100%;
+    max-height: 200px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
   .logButton {
-    border : 0;
-    background :none;
-    color : var(--greenish);
-    font-size : 1em;
-    font-family : 'Roboto', sans-serif;
+    border: 0;
+    background: none;
+    color: var(--greenish);
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
   }
-
-  .videoImage {
-    object-fit : cover;
-    width : 100%;
-    min-height : 200px;
-    max-height: 200px;
-    filter : brightness(155%) grayscale(90%) invert(15%);
-  }
-
-  
 }
-
-@media only screen and (max-width: 395px) {
-  #hero-subtitle {
-    font-size: 3vw;
-  }
-}
+/*# sourceMappingURL=layout.css.map */

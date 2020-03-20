@@ -1,0 +1,467 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100&display=swap");
+
+:root{
+  --greenish: rgb(0, 125, 0);
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  background-image: url('../images/shiplap.jpg');
+  background: white;
+  background-attachment: fixed;
+  overflow-x: hidden
+}
+
+body, #___gatsby, #gatsby-focus-wrapper {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url('../images/shiplap.jpg');
+  background-attachment: fixed;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: white;
+  min-height: 50vh;
+  background-image: url("../images/sophie_header.png");
+  background-position: left center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0px 5px 10px gray;
+  @media only screen and (min-width: 901px) {
+      font-size: calc(10px + 3vmin);
+  }
+  @media only screen and (max-width: 900px) {
+      font-size: calc(10px + 2vmin);
+  }
+}
+
+.App-Link {
+  color: var(--greenish);
+  &:visited {
+    color: var(--greenish);
+  }
+  &:hover {
+    background: #EEE;
+  }
+  @media only screen and (max-width: 900px){
+    margin: 15px;
+    display: none;
+  }
+  @media only screen and (min-width: 901px){
+    height: 100%;
+    width: calc(100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.blogCardLink, .blogCardLink:visited, .blogCardLink:active, .homeLink, .homeLink:visited, .homeCardLink:active {
+  color: black;
+}
+
+.Protected-Links {
+  width: 100%;
+  height: max-content;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  & > .App-Link {
+    height: 3em;
+    width: 100%;
+    background: white;
+    justify-content: center;
+    align-items:center;
+    font-weight: lighter;
+    font-style: italic;
+    margin: 0px;
+    &:hover {
+      background: #EEE;
+    }
+  }
+  @media only screen and (min-width: 901px){
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+
+.Hidden-Link {
+  display: none;
+  box-shadow: 0px 5px 10px gray;
+}
+
+#hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media only screen and (min-width: 901px){
+    margin-right: 10%;
+    align-self: flex-end;
+    text-align: center;
+  }
+  @media only screen and (max-width: 900px){
+    align-self: center;
+    align-items: center;
+  }
+}
+
+#hero-title {
+  letter-spacing: .5em;
+  text-transform: uppercase;
+  color: black;
+  font-weight: normal;
+  border-bottom: 1px solid black;
+}
+
+#hero-subtitle {
+  font-size: calc(10px + 1vmin);
+  font-style: italic;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--greenish);
+  font-weight: normal;
+  @media only screen and (max-width: 395px) {
+      font-size: 3vw;
+  }
+}
+
+.slightlyBigger {
+  font-size: calc(10px + 4vmin);
+}
+
+#content {
+  width: 100%;
+  height: 100%;
+  border: 1px solid pink;
+  margin-top: 50px;
+}
+
+.sophieSpinner {
+  width: 170px !important;
+  & > div {
+    width: 50px !important;
+    height: 50px !important;
+  }
+}
+
+#spinnerContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+footer {
+  width: 100vw;
+  background: white;
+  box-shadow: 5px 0px 10px gray;
+  text-align: center;
+}
+
+.cardTitle, .cardTitle:visited {
+  margin: 0px;
+  color: black;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+
+.cardDate {
+  margin-top: 0px;
+  font-style: italic;
+  color: var(--greenish);
+}
+
+.iframe-container {
+  width: 100vw;
+  height: 500px;
+  z-index: 99;
+}
+
+#nav-bars {
+  @media only screen and (max-width: 900px){
+    color: var(--greenish);
+    font-size: 1.5em;
+    position: absolute;
+    top: 20px;
+    left: 45px;
+    z-index: 5;
+  }
+  @media only screen and (min-width: 901px) {
+    display: none;
+  }
+}
+
+
+  
+.App-navigation {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.3em;
+  color: var(--greenish);
+  background-color: white;
+  @media only screen and (max-width: 900px){
+    width: auto;
+    height: 100%;
+    position: sticky;
+    left: 0px;
+    top: 0px;
+    z-index: 100;
+  }
+  @media only screen and (min-width: 901px) {
+    width: 100%;
+    height: 3em;
+    z-index: -1;
+  }
+}
+
+#nav1 {
+  height: 100%;
+  display: flex;
+  box-shadow: 0px 5px 10px gray;
+  @media only screen and (min-width: 901px) {
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+  @media only screen and (max-width: 900px){
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+  
+
+main {
+  display: flex;
+  flex-direction: column;
+  @media only screen and (min-width: 901px) {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+
+#login {  
+  @media only screen and (min-width: 901px) {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    & > * {
+      margin-left: 10px;
+      color: black;
+      font-size: 1rem;
+      font-weight: lighter;
+    }
+    & > .logButton {
+      background-color: inherit;
+      border: 0px;
+      color: var(--greenish);
+      font-weight: thinner;
+    }
+  }
+  @media only screen and (max-width: 900px){
+    display: none;
+  }
+}
+
+#loginNavBar {
+  @media only screen and (min-width: 901px) {
+    display: none;
+  }
+  @media only screen and (max-width: 900px) {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    display: flex;
+    align-items: center;
+    & > * {
+      margin-left: 10px;
+      color: black;
+      font-size: 1rem;
+      font-weight: lighter;
+    }
+    & > .logButton {
+      background-color: inherit;
+      border: 0px;
+      color: var(--greenish);
+      font-weight: lighter;
+      font-style: italic;
+    }
+  }
+}
+
+
+#indexContent {
+  @media only screen and (min-width: 901px) {
+    background: white;
+    box-shadow: 5px 5px 10px gray;
+    margin: 20px;
+    padding: 0 50px 50px;
+  }
+  @media only screen and (max-width: 900px) {
+    padding: 20px;
+  }
+}
+
+
+.blogCard {
+  box-shadow: 5px 5px 10px gray;
+  background: white;
+  @media only screen and (min-width: 901px) {
+    min-height:200px;
+    width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+  }
+  @media only screen and (max-width: 900px) {
+    margin-bottom: 20px;
+  }
+}
+
+
+.blogCardData {
+  @media only screen and (min-width: 901px) {
+    width: 80%;
+    padding: 20px;
+    & > .App-Link {
+      height: inherit;
+      width: auto;
+      padding: 15px;
+      margin: 10px;
+    }
+  }
+  @media only screen and (max-width: 900px) {
+    padding: 10px;
+  }
+}
+
+.cardImg {
+  @media only screen and (min-width: 901px) {
+    width: 200px;
+    height: 100%;
+    filter: grayscale(100%);
+  }
+}
+
+.pageTitle {
+  text-align: center;
+  margin: 20px;
+  letter-spacing: .3em;
+  text-shadow: 5px 5px 10px gray;
+  color: var(--greenish);
+  @media only screen and (min-width: 901px) {
+    width: calc(100% - 40px);
+    font-size: 3vw;
+    align-self: center;
+  }
+  @media only screen and (max-width: 900px) {
+    width: 100%;
+    font-size: 10vw;
+    align-self: center;
+  }
+}
+  
+#hamburger {
+  @media only screen and (min-width: 901px) {
+    display: none;
+  }
+  @media only screen and (max-width: 900px) {
+    margin: 30px;
+    color: var(--greenish);
+    &:visited {
+      color: var(--greenish);
+    }
+  }
+}
+
+.socialIcon {
+  @media only screen and (min-width: 901px) {
+    width: 3vw;
+  }
+  @media only screen and (max-width: 900px) {
+    width: 10vw;
+  }
+}
+
+.imageWrapper {
+  @media only screen and (min-width: 901px) {
+    width: 200px;
+  }
+  @media only screen and (max-width: 900px) {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+.login1 {
+  @media only screen and (min-width: 901px) {
+    display: none;
+  }
+  @media only screen and (max-width: 900px) {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.videoImage {
+  object-fit: cover;
+  filter : brightness(155%) grayscale(90%) invert(15%);
+  min-height : 200px;
+  @media only screen and (min-width: 901px) {
+    max-width : 200px;
+  }
+  @media only screen and (max-width: 900px) {
+    width : 100%;
+    max-height: 200px;
+  }
+}
+
+.logButton {
+  @media only screen and (max-width: 900px) {
+    border : 0;
+    background :none;
+    color : var(--greenish);
+    font-size : 1em;
+    font-family : 'Roboto', sans-serif;
+    font-weight: bold;
+  }
+}
+
+ 
