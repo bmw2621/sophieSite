@@ -7,7 +7,11 @@ const BlogCard = (props) => {
   // Create stateful variale to keep track if the entire article is displayed or not
   let title = props.title
   let created = props.created
-  let text = props.text.split(' ').splice(0, 50).join(' ') + '...'
+  let text = props.text
+    .replace(new RegExp('<img.*>','g'), '')
+    .split(' ')
+    .splice(0, 70)
+    .join(' ') + '...'
   let id = props.id
   let image = props.image
 

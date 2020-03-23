@@ -8,6 +8,21 @@ a {
   text-decoration: none;
 }
 
+.articlePicture {
+  width: 100%;
+}
+
+.articleFeaturedImage {
+  filter: brightness(150%) grayscale(100%);
+  object-fit: cover;
+  @media only screen and (min-width: 901px) {
+    width: 200px;
+  }
+  @media only screen and (max-width: 900px) {
+    width: 100%;
+  }
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: bold;

@@ -7,6 +7,29 @@ a {
   text-decoration: none;
 }
 
+.articlePicture {
+  width: 100%;
+}
+
+.articleFeaturedImage {
+  -webkit-filter: brightness(150%) grayscale(100%);
+          filter: brightness(150%) grayscale(100%);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media only screen and (min-width: 901px) {
+  .articleFeaturedImage {
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .articleFeaturedImage {
+    width: 100%;
+  }
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: bold;

@@ -8,10 +8,9 @@ export default ({data}) => {
 
   const post = data.nodeArticle
 
-  // Create stateful variale to keep track if the entire article is displayed or not
   let title = post.title
   let created = post.created
-  let text = post.body.processed
+  let text = post.body.processed.replace(new RegExp('src="/sites/default/files/inline-images','g'), 'class="articlePicture" src="http://18.189.116.57/sites/default/files/inline-images')
   let id = post.id
   let image = post.relationships.field_image && post.relationships.field_image.localFile.childImageSharp.fluid
 
@@ -23,8 +22,7 @@ export default ({data}) => {
         image &&
         <Img
           fluid={image}
-          style={{"width":"200px"}}
-          imgStyle={{"objectFit":"cover","width":"200px", "filter":"brightness(150%) grayscale(100%)"}}
+          className="articleFeaturedImage"
           />
       }
         <div className="blogCardData">
