@@ -19,4 +19,25 @@ exports.createPages = async function({ actions, graphql }) {
       context: { id : article.id },
     })
   })
+
+  const videoData = await graphql(`
+    {
+      allFile(filter: {sourceInstanceName: {eq: "videos"}}) {
+        nodes {
+          relativePath
+          id
+        }
+      }
+    }
+  `)
+
+  videoData.data.allFile.nodes.forEach(video => {
+    const slug = video.relativePath.split(".")[0]
+    console.log(slug)
+    actions.createPage({
+      path: slug,
+      component: require.resolve(`./src/templates/videoTemplate.js`),
+      context: { id: video.id }
+    })
+  })
 }

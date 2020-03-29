@@ -8,5 +8,10 @@
       "accessName" : "YogaClass002",
       "slug" : "yoga2",
       "linkText" : "Yoga Class 2"
+    },
+    {
+      "accessName" : "JeromeSays",
+      "slug" : "Jerome_Says",
+      "linkText" : "Jerome Says"
     }
 ]
