@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 
-const Yoga1Page = () => {
+const Piyo032720Page = () => {
 
   const { isAuthenticated, user } = useAuth()
   const access = require("../Access/access.json")
@@ -14,14 +14,14 @@ const Yoga1Page = () => {
   if(isAuthenticated() && Object.keys(access).includes(user.email) && access[user.email].includes("YogaClass001")){
     return (
       <Layout>
-        <SEO title="Yoga Class 001" />
+        <SEO title="PiYo | March 27, 2020" />
         <span className="pageTitle">You have authorization for this site</span>
       </Layout>
     )
   } else {
     return (
       <Layout>
-        <SEO title="Yoga Class 001" />
+        <SEO title="PiYo | March 27, 2020" />
         <span className="pageTitle">You do not have authorization for this site</span>
       </Layout>
     ) 
@@ -30,4 +30,4 @@ const Yoga1Page = () => {
 
   }
 
-export default Yoga1Page
+export default Piyo032720Page

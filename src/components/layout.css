@@ -498,6 +498,7 @@ main {
 @media only screen and (max-width: 900px) {
   #indexContent {
     padding: 20px;
+    background: rgba(255, 255, 255, 0.7);
   }
 }
 

@@ -7,13 +7,17 @@ const IndexPage = () =>  (
   <Layout>
     <SEO title="Home" />
     <div id="indexContent">
-      <h1 className="pageTitle">Hi people</h1>
+      <h1 className="pageTitle">Hey, Y'all!</h1>
 
-        <p>Aliquam ultrices molestie nibh, non sollicitudin elit faucibus quis. Maecenas tincidunt, urna vel tristique lacinia, velit purus imperdiet turpis, vel ullamcorper dui lacus nec risus. Sed vitae felis sapien. Quisque quis lorem non augue mattis auctor. Donec in faucibus lectus. In hac habitasse platea dictumst. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris pretium in orci vitae facilisis. Nam sit amet diam venenatis, mattis odio ac, imperdiet risus. Sed mollis posuere nibh, nec sagittis libero rhoncus ut.</p>
+        <p>&emsp;It has been a ride from being a military spouse as a stay at home mama moving where the army sent us…. teaching fitness classes…. building my own business…. adding another babe to the crew totaling 4 little loves…. to currently linking arms with my man in our businesses at home together or on the road together. I love empowering others to have a clear vision, reach goals, experience joy and find freedom.</p>
 
-        <p>Sed lacus odio, condimentum ut condimentum sit amet, tempor sit amet tellus. Cras vitae nunc ac quam iaculis tempus sit amet sed magna. Aenean ut sem ut ligula ornare blandit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc dignissim purus tristique libero volutpat pulvinar. Fusce vestibulum non tellus vel consectetur. Aliquam enim dolor, bibendum eget diam ac, consequat ultrices leo. Nulla quis lacus et nisi porttitor lacinia eget a urna. Maecenas et sem faucibus, consequat est quis, accumsan leo. Praesent posuere augue congue, lacinia odio et, congue purus.</p>
+        <p>&emsp;I am so glad to have this spot to share with you. I have to share “It all Starts with your Underwear!” with you. This is a concept I wrote down when I was 17. I had torn my meniscus as a competitve cheerleader and my weight started to creep up. Yes, I could watch what I was eating, diet and get back to where I was but for the time being I needed to do something. I went out and bought some new underwear. Novel concept right? But this simple action shaped my perspective early. I could stay where I was or take action. </p>
 
-        <p>Pellentesque vel quam sagittis, rhoncus dolor non, varius metus. Donec pulvinar nisl quis ipsum finibus, quis varius massa ultrices. Nunc tincidunt malesuada vulputate. Sed condimentum, turpis eu imperdiet facilisis, mi nulla vehicula elit, sed tincidunt nunc metus in sapien. Proin porttitor lacus ut ipsum ornare egestas. Pellentesque laoreet volutpat pretium. In hac habitasse platea dictumst. Vivamus justo diam, placerat eu ligula at, pellentesque rhoncus arcu. Pellentesque egestas quam sit amet sagittis eleifend. Mauris tempus luctus mauris, eget volutpat nisi eleifend et. Vivamus aliquet a est dignissim bibendum. Curabitur porta laoreet nunc eget faucibus. Curabitur velit justo, hendrerit vitae mauris at, pretium dapibus massa.</p>
+        <p>&emsp;We can keep wearing the uber tight, skin sectioning, buldge causing underwear or we can go out and put some fabulous underwear on that fits right now. I want to share with you my seasons of stuck, of action, of overcoming and then some. I want to share the real, the vulnerable and the beautiful. I want to share the ins and outs, the highs and lows… in marriage, mamahood, building businesses, staying healthy, sharing fitness, and even sharing my ultra basic kid allergy and mama goal friendly recipes that make life easier . Its a good day when we can all “eat dessert first” right?! </p>
+
+        <p>&emsp;I am so grateful y’all have joined me in this journey. Shoot me a message with where you are in this globe and hopefully one day our paths will cross not just through a screen! Big amazing things ahead, We are better together!</p>
+
+        <p>Light and Love,<br/>Sophie Winchester</p>
     </div>
 
   </Layout>
