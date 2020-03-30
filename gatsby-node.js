@@ -30,7 +30,7 @@ exports.createPages = async function({ actions, graphql }) {
       }
     }
   `)
-  console.log("****************",videoData,"****************")
+
   videoData.data.allS3Object.nodes.forEach(video => {
     const slug = video.Key.split(".")[0]
     
