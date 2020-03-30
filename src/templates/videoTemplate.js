@@ -11,10 +11,11 @@ export default ({ data }) => {
   const video = data.s3Object
   const { isAuthenticated, user } = useAuth()
 
-  let title = video.Key.split(".")[0].split("_").join(" ")
+  let _title = video.Key.split(".")[0]
+  let title = _title.split("_").join(" ")
   let filePath = `https://sophiesiteassets.s3.us-east-2.amazonaws.com/${video.Key}`
 
-  if(isAuthenticated() && Object.keys(access).includes(user.email.toLowerCase()) && access[user.email.toLowerCase()].includes(title)){
+  if(isAuthenticated() && Object.keys(access).includes(user.email.toLowerCase()) && access[user.email.toLowerCase()].includes(_title)){
     return (
       <Layout>
       <SEO title={title} />
