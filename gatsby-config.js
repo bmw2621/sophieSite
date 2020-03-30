@@ -5,8 +5,8 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: `Sophie Winchester`,
-    description: `Learning to Build a Gatsby Blog with Drupal CMS.`,
-    author: `@gatsbyjs`,
+    description: `Healthy Living with Sophie Winchester | Live Healthy, Live Happy, Live Free`,
+    author: `Benjamin Winchester`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -18,12 +18,15 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `videos`,
-        path: `${__dirname}/src/videos/`,
+    resolve: 'gatsby-source-s3',
+    options: {
+      aws: {
+        accessKeyId: process.env.GATSBY_AWS_ACCESS_ID,
+        secretAccessKey: process.env.GATSBY_AWS_ACCESS_SECRET,
       },
+      buckets: ['sophiesiteassets'],
     },
+  },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

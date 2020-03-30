@@ -22,18 +22,18 @@ exports.createPages = async function({ actions, graphql }) {
 
   const videoData = await graphql(`
     {
-      allFile(filter: {sourceInstanceName: {eq: "videos"}}) {
+      allS3Object {
         nodes {
-          relativePath
+          Key
           id
         }
       }
     }
   `)
-
-  videoData.data.allFile.nodes.forEach(video => {
-    const slug = video.relativePath.split(".")[0]
-    console.log(slug)
+  console.log("****************",videoData,"****************")
+  videoData.data.allS3Object.nodes.forEach(video => {
+    const slug = video.Key.split(".")[0]
+    
     actions.createPage({
       path: slug,
       component: require.resolve(`./src/templates/videoTemplate.js`),

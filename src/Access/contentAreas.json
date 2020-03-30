@@ -1,17 +1,7 @@
 [
     {
-      "accessName" : "PiYo032720",
-      "slug" :"piyo032720",
-      "linkText" : "PiYo | March 27, 2020"
-    },
-    {
-      "accessName" : "YogaClass002",
-      "slug" : "yoga2",
-      "linkText" : "Yoga Class 2"
-    },
-    {
-      "accessName" : "JeromeSays",
-      "slug" : "Jerome_Says",
-      "linkText" : "Jerome Says"
+      "accessName" : "PiYoAtMistletow",
+      "slug" : "PiYo_at_Mistletoe",
+      "linkText" : "PiYo at Mistletoe"
     }
 ]

@@ -4,12 +4,12 @@ import Img from "gatsby-image"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 
-export default ({data}) => {
+export default ({ data }) => {
 
-  const video = data.file
+  const video = data.s3Object
 
-  let title = video.name.split("_").join(" ")
-  let filePath = video.publicURL
+  let title = video.Key.split(".")[0].split("_").join(" ")
+  let filePath = `https://sophiesiteassets.s3.us-east-2.amazonaws.com/${video.Key}`
 
   return (
     <Layout>
@@ -30,11 +30,7 @@ export default ({data}) => {
 
 export const query = graphql`
   query($id: String!) {
-  file(id: {eq: $id}) {
-    sourceInstanceName
-    name
-    ext
-    relativePath
-    publicURL
-  }
-}`
+    s3Object(id: {eq: $id}) {
+      Key
+    }
+  }`
