@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import { useAuth } from 'react-use-auth'
+const access = require("../Access/access.json")
 
 export default ({ data }) => {
 
@@ -13,7 +14,7 @@ export default ({ data }) => {
   let title = video.Key.split(".")[0].split("_").join(" ")
   let filePath = `https://sophiesiteassets.s3.us-east-2.amazonaws.com/${video.Key}`
 
-  if(isAuthenticated() && Object.keys(access).includes(user.email) && access[user.email].includes("YogaClass001")){
+  if(isAuthenticated() && Object.keys(access).includes(user.email.toLowerCase()) && access[user.email.toLowerCase()].includes(title)){
     return (
       <Layout>
       <SEO title={title} />
