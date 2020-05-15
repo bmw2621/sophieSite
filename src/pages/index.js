@@ -13,7 +13,7 @@ const IndexPage = () => {
     } else {
       return "Y'all"
     }
-  })
+  }
   
   if(isAuthenticated()){
     user.given_name ? user.given_name : user.email
