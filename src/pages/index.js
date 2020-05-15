@@ -9,7 +9,7 @@ const IndexPage = () => {
 
   const welcome = () => {
     if(isAuthenticated()){
-       return user.given_name ? user.given_name : user.email
+       return user.given_name ? user.given_name : user.email.split("@")[0]
     } else {
       return "Y'all"
     }
