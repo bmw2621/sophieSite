@@ -5,13 +5,13 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const IndexPage = () => {
-  const { isAuthenticated, login, logout, user } = useAuth()
+  const { isAuthenticated, login, logout, user } = useAuth();
 
-  const welcome =  if(isAuthenticated()){
+  const welcome = "Y'all";
+  
+  if(isAuthenticated()){
     user.given_name ? user.given_name : user.email
-  } else {
-    "Y'all"
-  }
+  };
 
   return (
     <Layout>
