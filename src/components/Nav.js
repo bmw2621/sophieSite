@@ -65,7 +65,7 @@ const Nav = () => {
           <a href="http://sophiewinchester.arbonne.com" className="App-Link">Shop</a>
           <Link to="/interact" className="App-Link">Interact</Link>
           {isAuthenticated() && <a href="https://form.jotform.com/201335579575160" className="App-Link">Class Waiver</a>}
-          {isAuthenticated() && <div className="Protected-Links"><div className="App-Link" id="myContentDropdown" onClick={toggleContentFold} style={{"fontWeight":"bold", "fontStyle":"normal","justifyContent":"space-between"}}><FontAwesomeIcon style={{"margin":"0px 20px"}} icon={faChevronDown} />My Content<FontAwesomeIcon style={{"margin":"0px 20px"}} icon={faChevronDown} /></div>{userContent}</div>}
+          {isAuthenticated() && <div className="Protected-Links"><div className="App-Link" id="myContentDropdown" onClick={toggleContentFold} style={{"fontWeight":"bold", "fontStyle":"normal","justifyContent":"space-between"}}>My Content<FontAwesomeIcon style={{"margin":"0px 20px"}} icon={faChevronDown} /></div>{userContent}</div>}
           
         </nav>
 
