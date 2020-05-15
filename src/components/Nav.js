@@ -47,7 +47,7 @@ const Nav = () => {
   contentAreas.forEach(area => {
     if(Object.keys(access).includes(user.email) && access[user.email].includes(area.accessName)){
       userContent.push(
-        <Link to={`/${area.slug}`} className="App-Link Hidden-Link"  key={area.accessName}>{area.linkText}</Link>
+        <Link to={`/${area.slug}`} className="App-Link Hidden-Link"  key={area.accessName} style={{"display":"none"}}>{area.linkText}</Link>
       )
     }
   })

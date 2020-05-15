@@ -17,7 +17,13 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
       <div id="indexContent">
-        <h1 className="pageTitle">Hey, {welcome}!</h1>
+        <h1 className="pageTitle">Hey, {
+          if(isAuthenticated()){
+            user.given_name ? user.given_name : user.email
+          } else {
+            "Y'all"
+          }
+        }!</h1>
 
           <p>&emsp;It has been a ride from being a military spouse as a stay at home mama moving where the army sent us…. teaching fitness classes…. building my own business…. adding another babe to the crew totaling 4 little loves…. to currently linking arms with my man in our businesses at home together or on the road together. I love empowering others to have a clear vision, reach goals, experience joy and find freedom.</p>
 
